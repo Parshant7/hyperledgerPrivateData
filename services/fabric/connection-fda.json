@@ -1,0 +1,49 @@
+{
+    "name": "test-network-fda",
+    "version": "1.0.0",
+    "client": {
+        "organization": "fda",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "fda": {
+            "mspid": "fdaMSP",
+            "peers": [
+                "peer0.fda.com"
+            ],
+            "certificateAuthorities": [
+                "ca.fda.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.fda.com": {
+            "url": "grpcs://localhost:8051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICNDCCAdugAwIBAgIUOMniJOAKGlqCHcac6BaQ18Q+PVEwCgYIKoZIzj0EAwIw\ndzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMSUwIwYDVQQK\nExxGb29kIGFuZCBEcnVnIEFkbWluaXN0cmF0aW9uMRYwFAYDVQQLEw1RdWFsaXR5\nIENoZWNrMRAwDgYDVQQDEwdmZGEuY29tMB4XDTIzMDkyMjA1MTUwMFoXDTM4MDkx\nODA1MTUwMFowdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5h\nMSUwIwYDVQQKExxGb29kIGFuZCBEcnVnIEFkbWluaXN0cmF0aW9uMRYwFAYDVQQL\nEw1RdWFsaXR5IENoZWNrMRAwDgYDVQQDEwdmZGEuY29tMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAEn/TzXJsX95CUaS6EoPMhAKPSj0nZHF8JcnCEQxCtjsNOIP+b\nOf/pB1GdTw0FCLyeJpP8XPm9jugHq6UNx9IWHqNFMEMwDgYDVR0PAQH/BAQDAgEG\nMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFHkUJ4Pxb5IR9NsaWVUD52xp\nwvPEMAoGCCqGSM49BAMCA0cAMEQCIGvKFxxthVS3WCOCnnyaE4znj4YzDsq0doAU\ngTortJriAiAchcFdLwDK6H9+ZHaFsjrB6DzQHOuy/HQ0L48eYJxEFA==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.fda.com",
+                "hostnameOverride": "peer0.fda.com"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.fda.com": {
+            "url": "https://localhost:7054",
+            "caName": "ca-fda",
+            "tlsCACerts": {
+                "pem": ["-----BEGIN CERTIFICATE-----\nMIICNDCCAdugAwIBAgIUOMniJOAKGlqCHcac6BaQ18Q+PVEwCgYIKoZIzj0EAwIw\ndzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMSUwIwYDVQQK\nExxGb29kIGFuZCBEcnVnIEFkbWluaXN0cmF0aW9uMRYwFAYDVQQLEw1RdWFsaXR5\nIENoZWNrMRAwDgYDVQQDEwdmZGEuY29tMB4XDTIzMDkyMjA1MTUwMFoXDTM4MDkx\nODA1MTUwMFowdzELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5h\nMSUwIwYDVQQKExxGb29kIGFuZCBEcnVnIEFkbWluaXN0cmF0aW9uMRYwFAYDVQQL\nEw1RdWFsaXR5IENoZWNrMRAwDgYDVQQDEwdmZGEuY29tMFkwEwYHKoZIzj0CAQYI\nKoZIzj0DAQcDQgAEn/TzXJsX95CUaS6EoPMhAKPSj0nZHF8JcnCEQxCtjsNOIP+b\nOf/pB1GdTw0FCLyeJpP8XPm9jugHq6UNx9IWHqNFMEMwDgYDVR0PAQH/BAQDAgEG\nMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFHkUJ4Pxb5IR9NsaWVUD52xp\nwvPEMAoGCCqGSM49BAMCA0cAMEQCIGvKFxxthVS3WCOCnnyaE4znj4YzDsq0doAU\ngTortJriAiAchcFdLwDK6H9+ZHaFsjrB6DzQHOuy/HQ0L48eYJxEFA==\n-----END CERTIFICATE-----\n"]
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
