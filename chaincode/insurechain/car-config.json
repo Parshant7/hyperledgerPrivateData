@@ -1,0 +1,11 @@
+[
+    {
+        "name": "collectionCarPrivateDetails",
+        "policy": "OR('osqoMSP.member')",
+        "requiredPeerCount": 1,
+        "maxPeerCount": 3,
+        "blockToLive": 100,
+        "memberOnlyRead": true,
+        "memberOnlyWrite": true
+    }
+]
